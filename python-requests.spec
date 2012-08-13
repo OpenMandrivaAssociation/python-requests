@@ -1,6 +1,6 @@
 %define	module	requests
 %define name	python-%{module}
-%define version 0.13.3
+%define version 0.13.6
 %define release 1
 
 Summary:	Python HTTP for Humans
