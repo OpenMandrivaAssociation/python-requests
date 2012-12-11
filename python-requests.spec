@@ -36,3 +36,15 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %defattr(-,root,root)
 %doc HISTORY.rst LICENSE README.rst
 %py_sitedir/requests*
+
+
+%changelog
+* Mon Aug 13 2012 Lev Givon <lev@mandriva.org> 0.13.6-1
++ Revision: 814453
+- Update to 0.13.6.
+
+* Tue Jul 17 2012 Lev Givon <lev@mandriva.org> 0.13.3-1
++ Revision: 810082
+- imported package python-requests
+- imported package python-requests
+
