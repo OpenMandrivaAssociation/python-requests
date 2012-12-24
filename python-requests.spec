@@ -1,6 +1,6 @@
 %define	module	requests
 %define name	python-%{module}
-%define version 0.13.6
+%define version 1.0.4
 %define release 1
 
 Summary:	Python HTTP for Humans
@@ -11,7 +11,6 @@ Source0:	http://pypi.python.org/packages/source/r/%{module}/%{module}-%{version}
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Requires:	python-certifi, python-urllib3
 
@@ -26,25 +25,8 @@ crazy hacks for you.
 %setup -q -n %{module}-%{version}
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc HISTORY.rst LICENSE README.rst
 %py_sitedir/requests*
-
-
-%changelog
-* Mon Aug 13 2012 Lev Givon <lev@mandriva.org> 0.13.6-1
-+ Revision: 814453
-- Update to 0.13.6.
-
-* Tue Jul 17 2012 Lev Givon <lev@mandriva.org> 0.13.3-1
-+ Revision: 810082
-- imported package python-requests
-- imported package python-requests
-
