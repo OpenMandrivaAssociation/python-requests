@@ -5,9 +5,9 @@
 
 Summary:	Python HTTP for Humans
 Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	http://pypi.python.org/packages/source/r/%{module}/%{module}-%{version}.tar.gz
+Version:	2.0.0
+Release:	1
+Source0:	http://pypi.python.org/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
@@ -29,4 +29,5 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %files
 %doc HISTORY.rst LICENSE README.rst
-%py_sitedir/requests*
+%py_puresitedir/requests*
+
