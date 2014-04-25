@@ -1,11 +1,9 @@
 %define	module	requests
-%define name	python-%{module}
-%define version 1.0.4
-%define release 1
 
 Summary:	Python HTTP for Humans
-Name:		%{name}
-Version:	2.0.0
+
+Name:		python-%{module}
+Version:	2.2.1
 Release:	1
 Source0:	http://pypi.python.org/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
@@ -29,5 +27,6 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %files
 %doc HISTORY.rst LICENSE README.rst
-%py_puresitedir/requests*
+%{py_puresitedir}/requests*
+
 

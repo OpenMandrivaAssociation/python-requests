@@ -1,4 +1,5 @@
 removed_sources:
   requests-1.0.4.tar.gz: d84c21bba756f430da83d7fad1b234dbee9cb575
-sources:
   requests-2.0.0.tar.gz: c33cca93d91c8c4ef8575f46b937cb4883ae92bb
+sources:
+  requests-2.2.1.tar.gz: 88eb1fd6a0dfb8b97262f8029978d7c75eebc16f
