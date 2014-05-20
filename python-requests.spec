@@ -2,8 +2,9 @@
 
 Summary:	Python HTTP for Humans
 
+
 Name:		python-%{module}
-Version:	2.2.1
+Version:	2.3.0
 Release:	1
 Source0:	http://pypi.python.org/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
@@ -28,5 +29,6 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %files
 %doc HISTORY.rst LICENSE README.rst
 %{py_puresitedir}/requests*
+
 
 
