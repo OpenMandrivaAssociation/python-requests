@@ -1,17 +1,17 @@
 %define	module	requests
 
 Summary:	Python HTTP for Humans
-
-
 Name:		python-%{module}
 Version:	2.3.0
-Release:	2
+Release:	3
 Source0:	http://pypi.python.org/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
 BuildArch:	noarch
-Requires:	python-certifi, python-urllib3
+BuildRequires:	pkgconfig(python3)
+Requires:	python-certifi
+Requires:	python-urllib3
 
 %description
 Requests allow you to send HTTP/1.1 requests. You can add headers,
@@ -29,6 +29,4 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %files
 %doc HISTORY.rst LICENSE README.rst
 %{py_puresitedir}/requests*
-
-
 
