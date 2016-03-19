@@ -3,7 +3,7 @@
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
 Version:	2.3.0
-Release:	5
+Release:	6
 Source0:	http://pypi.python.org/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
