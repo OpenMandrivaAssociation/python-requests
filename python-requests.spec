@@ -10,6 +10,7 @@ Group:		Development/Python
 Url:		http://python-requests.org/
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python-setuptools
 Requires:	python-certifi
 Requires:	python-urllib3
 
