@@ -2,14 +2,16 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.3.0
-Release:	6
-Source0:	http://pypi.python.org/packages/source/r/requests/requests-%{version}.tar.gz
+Version:	2.14.2
+Release:	1
+Source0:	https://pypi.python.org/packages/72/46/4abc3f5aaf7bf16a52206bb0c68677a26c216c1e6625c78c5aef695b5359/requests-2.14.2.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python-setuptools
+BuildRequires:	python2-setuptools
 Requires:	python-certifi
 Requires:	python-urllib3
 
@@ -20,13 +22,40 @@ dictionaries, and access the response data in the same way. It's
 powered by httplib and urllib3, but it does all the hard work and
 crazy hacks for you.
 
+
+%package -n python2-%{module}
+Summary:	Python HTTP for Human
+Group:		Development/Python
+Requires:	python2
+
+%description -n python2-%{module}
+
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{version} -c
+
+mv %{module}-%{version} python2
+cp -r python2 python3
+
+%build
+pushd python2
+%{__python2} setup.py build
+popd
+
+pushd python3
+%{__python} setup.py build
+popd
 
 %install
+pushd python2
+PYTHONDONTWRITEBYTECODE= %__python2 setup.py install --root=%{buildroot}
+popd
+
+pushd python3
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
+popd
 
 %files
-%doc HISTORY.rst LICENSE README.rst
 %{py_puresitedir}/requests*
 
+%files -n python2-%{module}
+%{py2_puresitedir}/requests*
