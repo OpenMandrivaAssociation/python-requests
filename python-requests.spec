@@ -11,7 +11,9 @@ Url:		http://python-requests.org/
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-setuptools
+BuildRequires:	python-pkg-resources
 BuildRequires:	python2-setuptools
+BuildRequires:	python2-pkg-resources
 Requires:	python-certifi
 Requires:	python-urllib3
 
