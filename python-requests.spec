@@ -3,7 +3,7 @@
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
 Version:	2.18.4
-Release:	2
+Release:	3
 Source0:	https://github.com/requests/requests/archive/v%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
@@ -12,8 +12,6 @@ BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python-setuptools
 BuildRequires:	python-pkg-resources
-BuildRequires:	python2-setuptools
-BuildRequires:	python2-pkg-resources
 Requires:	python-certifi
 Requires:	python-urllib3
 
@@ -28,6 +26,9 @@ crazy hacks for you.
 %package -n python2-%{module}
 Summary:	Python HTTP for Human
 Group:		Development/Python
+BuildRequires:	pkgconfig(python2)
+BuildRequires:	python2-setuptools
+BuildRequires:	python2-pkg-resources
 Requires:	python2
 
 %description -n python2-%{module}
