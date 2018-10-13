@@ -1,10 +1,10 @@
-%define	module	requests
+%define module requests
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.18.4
-Release:	3
-Source0:	https://github.com/requests/requests/archive/v%{version}.tar.gz
+Version:	2.19.1
+Release:	1
+Source0:	https://github.com/requests/requests/archive/%{name}-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
@@ -50,11 +50,11 @@ popd
 
 %install
 pushd python2
-PYTHONDONTWRITEBYTECODE= %__python2 setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE= %{__python2} setup.py install --root=%{buildroot}
 popd
 
 pushd python3
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
 popd
 
 %files
