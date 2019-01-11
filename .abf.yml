@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   requests-2.19.1.tar.gz: 7ce5c51fc29a5b470aedab54ce90c8d9cda9fa79
+sources:
+  requests-2.21.0.tar.gz: 970805c2affcc5b237d86e7308dc4310f16d6f79

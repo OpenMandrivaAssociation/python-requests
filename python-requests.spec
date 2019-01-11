@@ -2,9 +2,9 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.19.1
-Release:	2
-Source0:	https://github.com/requests/requests/archive/%{module}-%{version}.tar.gz
+Version:	2.21.0
+Release:	1
+Source0:	https://pypi.io/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
@@ -41,20 +41,20 @@ cp -r python2 python3
 
 %build
 pushd python2
-%{__python2} setup.py build
+python setup.py build
 popd
 
 pushd python3
-%{__python} setup.py build
+python setup.py build
 popd
 
 %install
 pushd python2
-PYTHONDONTWRITEBYTECODE= %{__python2} setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE= python2} setup.py install --root=%{buildroot}
 popd
 
 pushd python3
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot}
 popd
 
 %files
