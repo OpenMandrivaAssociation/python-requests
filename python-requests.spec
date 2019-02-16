@@ -2,9 +2,9 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.19.1
-Release:	2
-Source0:	https://github.com/requests/requests/archive/%{module}-%{version}.tar.gz
+Version:	2.21.0
+Release:	1
+Source0:	https://github.com/kennethreitz/requests/archive/v%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
