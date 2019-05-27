@@ -2,9 +2,9 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.21.0
+Version:	2.22.0
 Release:	1
-Source0:	https://github.com/kennethreitz/requests/archive/v%{version}.tar.gz
+Source0:	https://github.com/kennethreitz/requests/archive/%{module}-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
@@ -40,22 +40,22 @@ mv %{module}-%{version} python2
 cp -r python2 python3
 
 %build
-pushd python2
+cd python2
 %{__python2} setup.py build
-popd
+cd -
 
-pushd python3
+cd python3
 %{__python} setup.py build
-popd
+cd -
 
 %install
-pushd python2
+cd python2
 PYTHONDONTWRITEBYTECODE= %{__python2} setup.py install --root=%{buildroot}
-popd
+cd -
 
-pushd python3
+cd python3
 PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
-popd
+cd -
 
 %files
 %{py_puresitedir}/requests*
