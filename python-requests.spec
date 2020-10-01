@@ -2,8 +2,8 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.22.0
-Release:	2
+Version:	2.24.0
+Release:	1
 Source0:	https://github.com/psf/requests/archive/%{module}-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
