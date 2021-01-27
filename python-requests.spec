@@ -2,9 +2,10 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.24.0
-Release:	2
-Source0:	https://github.com/psf/requests/archive/%{module}-%{version}.tar.gz
+Version:	2.25.1
+Release:	1
+# See also: https://github.com/psf/requests
+Source0:	https://files.pythonhosted.org/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
