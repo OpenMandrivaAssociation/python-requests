@@ -2,7 +2,7 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.25.1
+Version:	2.26.0
 Release:	1
 # See also: https://github.com/psf/requests
 Source0:	https://files.pythonhosted.org/packages/source/r/requests/requests-%{version}.tar.gz
@@ -10,7 +10,7 @@ License:	MIT
 Group:		Development/Python
 Url:		http://python-requests.org/
 BuildArch:	noarch
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	python-setuptools
 BuildRequires:	python-pkg-resources
 Requires:	python-certifi
