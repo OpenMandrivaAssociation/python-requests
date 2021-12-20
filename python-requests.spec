@@ -24,42 +24,14 @@ powered by httplib and urllib3, but it does all the hard work and
 crazy hacks for you.
 
 
-%package -n python2-%{module}
-Summary:	Python HTTP for Human
-Group:		Development/Python
-BuildRequires:	pkgconfig(python2)
-BuildRequires:	python2-setuptools
-BuildRequires:	python2-pkg-resources
-Requires:	python2
-
-%description -n python2-%{module}
-
 %prep
-%setup -q -n %{module}-%{version} -c
-
-mv %{module}-%{version} python2
-cp -r python2 python3
+%setup -q -n %{module}-%{version}
 
 %build
-cd python2
-%{__python2} setup.py build
-cd -
-
-cd python3
 %{__python} setup.py build
-cd -
 
 %install
-cd python2
-PYTHONDONTWRITEBYTECODE= %{__python2} setup.py install --root=%{buildroot}
-cd -
-
-cd python3
 PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
-cd -
 
 %files
 %{py_puresitedir}/requests*
-
-%files -n python2-%{module}
-%{py2_puresitedir}/requests*
