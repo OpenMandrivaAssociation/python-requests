@@ -3,7 +3,7 @@
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
 Version:	2.27.1
-Release:	2
+Release:	3
 # See also: https://github.com/psf/requests
 Source0:	https://files.pythonhosted.org/packages/source/r/requests/requests-2.27.1.tar.gz
 License:	MIT
@@ -23,15 +23,14 @@ dictionaries, and access the response data in the same way. It's
 powered by httplib and urllib3, but it does all the hard work and
 crazy hacks for you.
 
-
 %prep
-%setup -q -n %{module}-%{version}
+%autosetup -n %{module}-%{version}
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
+%py_install
 
 %files
 %{py_puresitedir}/requests*
