@@ -12,6 +12,7 @@ Group:		Development/Python
 Url:		http://python-requests.org/
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python-setuptools
 BuildRequires:	python-pkg-resources
 Requires:	python-certifi
