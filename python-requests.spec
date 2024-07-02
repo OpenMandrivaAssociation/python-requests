@@ -2,7 +2,7 @@
 
 Summary:	Python HTTP for Humans
 Name:		python-%{module}
-Version:	2.31.0
+Version:	2.32.3
 Release:	1
 # See also: https://github.com/psf/requests
 Source0:	https://files.pythonhosted.org/packages/source/r/requests/requests-%{version}.tar.gz
