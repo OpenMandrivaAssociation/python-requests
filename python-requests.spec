@@ -8,7 +8,7 @@ Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/r/requests/requests-%{version}.tar.gz
 License:	MIT
 Group:		Development/Python
-Url:		http://python-requests.org/
+Url:		https://python-requests.org/
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
