@@ -1,22 +1,21 @@
 %define module requests
 
+Name:		python-requests
 Summary:	Python HTTP for Humans
-Name:		python-%{module}
-Version:	2.32.5
-Release:	2
-# See also: https://github.com/psf/requests
-Source0:	https://files.pythonhosted.org/packages/source/r/requests/requests-%{version}.tar.gz
+Version:	2.33.1
+Release:	1
 License:	MIT
 Group:		Development/Python
-Url:		https://python-requests.org/
+# See also: https://github.com/psf/requests
+Url:		https://python-requests.org
+Source0:	https://files.pythonhosted.org/packages/source/r/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
+BuildSystem:	python
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
-BuildRequires:	python-setuptools
-BuildRequires:	python-pkg-resources
-BuildSystem:	python
-Requires:	python%{pyver}dist(certifi)
-Requires:	python%{pyver}dist(urllib3)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 %description
 Requests allow you to send HTTP/1.1 requests. You can add headers,
@@ -26,4 +25,5 @@ powered by httplib and urllib3, but it does all the hard work and
 crazy hacks for you.
 
 %files
-%{py_puresitedir}/requests*
+%{py_puresitedir}/%{module}
+%{py_puresitedir}/%{module}-%{version}.dist-info
