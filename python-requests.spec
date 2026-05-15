@@ -2,7 +2,7 @@
 
 Name:		python-requests
 Summary:	Python HTTP for Humans
-Version:	2.34.1
+Version:	2.34.2
 Release:	1
 License:	MIT
 Group:		Development/Python
