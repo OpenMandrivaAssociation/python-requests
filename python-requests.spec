@@ -3,7 +3,7 @@
 Name:		python-requests
 Summary:	Python HTTP for Humans
 Version:	2.34.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Python
 # See also: https://github.com/psf/requests
